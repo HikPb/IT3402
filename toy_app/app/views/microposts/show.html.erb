@@ -10,5 +10,11 @@
   <%= @micropost.user_id %>
 </p>
 
+<p>
+  <strong>User name:</strong>
+  <% @user = User.find(@micropost.user_id) %>
+  <%= @user.name %>
+</p>
+
 <%= link_to 'Edit', edit_micropost_path(@micropost) %> |
 <%= link_to 'Back', microposts_path %>
